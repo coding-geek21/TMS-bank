@@ -1,0 +1,87 @@
+.cust_myacc_container {
+  width: 80%;
+  height:auto;
+  margin: auto;
+}
+.cust_myacc_container .accdet {
+  background-color: #f0f8ff;
+  margin: 3px;
+  border: 1px solid black;
+  color: black;
+  text-align: center;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+}
+
+.cust_myacc_container .accdet label {
+  border: 1px solid rgba(44, 78, 134, 0.2);
+  padding: 8px;
+  float: left;
+  text-align: left;
+  margin: 5px;
+  width: 97%;
+  font-size: 15px;
+}
+
+.accdet input {
+  background-color: rgb(107, 172, 192);
+  padding: 1%;
+  border: 0px;
+  color: white;
+  font-size: 2.5vh;
+}
+
+.cust_statement_container_head label {
+  display: block;
+  text-align: center;
+  margin-top: 1%;
+  font-size: 3vh;
+}
+
+.cust_statement_container {
+  width: 80%;
+  margin: 2% auto;
+  height: 70%;
+  overflow-x: hidden;
+  border: 1px ligh black;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cust_statement {
+  font-size: 3vh;
+  width: 100%;
+  text-align: center;
+}
+.cust_statement table {
+  border-collapse: collapse;
+  margin: 1% auto;
+  font-size: 2vh;
+  border-collapse: collapse;
+  border: 1px rgb(221, 221, 221);
+  text-align: center;
+}
+.cust_statement table th {
+  color: white;
+  height: 50px;
+  widows: 50px;
+  background-color: rgb(107, 172, 192);
+  border: 1px solid rgb(245, 245, 245);
+}
+
+.cust_statement table tr:nth-child(even) {
+  background-color: rgb(242, 242, 242);
+}
+
+.cust_statement table tr:nth-child(odd) {
+  background-color: white;
+}
+
+.cust_statement table tr td {
+  border: 1px solid rgb(255, 255, 255);
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.cust_statement table tr {
+  background-color: blue;
+}
+
