@@ -58,10 +58,7 @@ if(isset($_POST['verify-btn'])){
 		 $cust_name = $row['Username'];
 		 $hidden_mob_no = substr($mob, 0, 3)."XXXX".substr($mob, 7, 10);
 
-		 //--------------------------------------------------------------------------------
-		// Send customer's password to his or her registered mobile number
-		//SMS integration code ------------------------------------
-
+		
 			require('textlocal.class.php');
 
 			$apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
@@ -76,13 +73,11 @@ if(isset($_POST['verify-btn'])){
 			} catch (Exception $e) {
 				die('Error: ' . $e->getMessage());
 			}
-		//------------------------------------------------------
-		//--------------------------------------------------------------------------------- 
+		
 			unset($_SESSION['cust_id']);
 			unset($_SESSION['forgetpass_otp']);
 
-		/*echo '<script>alert("Your SBI Internet banking password is : '.$pass.'")
-		location="customer_login.php"</script>';*/
+		
 
 		echo '<script>alert("Password sent successfully to your registered mobile number '.$hidden_mob_no.' \nPlease do not share with anyone")
 		location="customer_login.php";		

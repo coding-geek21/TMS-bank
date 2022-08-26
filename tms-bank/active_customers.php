@@ -39,7 +39,6 @@
 	
 	if ($result->num_rows > 0) {	   
 			  $Sl_no = 1; 
-    // output data of each row
 		while($row = $result->fetch_assoc()) {
 			
 		echo '

@@ -12,7 +12,6 @@
 <body class="flex-wrapper">
 
 <?php  
-	//session_start();
 	include 'header.php' ;
 	include 'staff_profile_header.php' ;
 	include 'db_connect.php';
@@ -66,7 +65,6 @@
 			
 			if ($result->num_rows > 0) {  
 					  $Sl_no = 1; 
-			// output data of each row
 				while($row = $result->fetch_assoc()) {
 					
 				echo '

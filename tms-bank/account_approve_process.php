@@ -87,10 +87,8 @@
 			'$ac_opening_date',
 			'ACTIVE') ";
 	
-					//Delete the application from pending_account table
 					$sql2 = "DELETE FROM pending_accounts Where Application_no = '$application_no' ";
 
-					//Create Passbook table of the customer
 					$sql3 = "CREATE TABLE passbook_$customer_id
 					(id INT(255) AUTO_INCREMENT PRIMARY KEY, 
 					Transaction_id VARCHAR(255) NULL,
@@ -101,7 +99,6 @@
 					Net_Balance VARCHAR(255) NULL,
 					Remark VARCHAR(255) NULL)";
 
-					//Create Beneficiary table of the customer
 					$sql4 = "CREATE TABLE beneficiary_$customer_id (id INT(255) AUTO_INCREMENT PRIMARY KEY, 
 					Beneficiary_name VARCHAR(255) NULL,
 					Beneficiary_ac_no VARCHAR(255) NULL,
@@ -112,7 +109,6 @@
 
 					
 
-					//If all the query is TRUE then issue commit else rollback 
 					if($conn->query($sql1) == TRUE && $conn->query($sql2) == TRUE  && $conn->query($sql3) == TRUE  && $conn->query($sql4) == TRUE){
 						
 						$transaction_id = mt_rand(100,999).mt_rand(1000,9999).mt_rand(10,99);
@@ -123,26 +119,6 @@
 					
 					$conn->commit();
 
-			//OTP integration for sending new account greeting and account details to customer-------------
-			//---------------------------------------------------------------------------------------------
-
-			// require('textlocal.class.php');
-			// $apikey = 'Mzie479SxfY-Z7slYf9AI3zVXCAu0G5skUBQVYOfRU';
-			// $textlocal = new Textlocal(false,false,$apikey);
-			// $numbers = array($mob_no);
-			// $sender = 'TXTLCL';
-			// $message = 'Welcome to Online Banking System. Your account number is  '.$acc_no.' Consider using our 24x7 Internet banking services to get full advantage. Happy banking.' ;
-		
-			// try {
-			// 	$result = $textlocal->sendSms($numbers, $message, $sender);
-			// 	print_r($result);
-			// } catch (Exception $e) {
-			// 	die('Error: ' . $e->getMessage());
-			// }
-
-
-			//------------------------------------------------------------------------------------------
-			//------------------------------------------------------------------------------------------ 
 			
 
 						echo '<script>alert("Account Created Successfully\n\nAccount no :'.$acc_no.'\n\nHint : Get Debit Card then register e-banking")</script>';
